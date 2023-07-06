@@ -13,5 +13,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/openai", require("./routes/openAiRoute"));
+app.use("/notes", require("./routes/notesRoutes"));
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
